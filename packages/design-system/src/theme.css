@@ -1,0 +1,77 @@
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+  /* Color Paletts with https://www.colorpalett.es/ */
+  /* Primary Color */
+  --color-primary: var(--theme-color-primary);
+  --color-primary-50: oklch(91.45% 0.023 264);
+  --color-primary-100: oklch(84% 0.053 263);
+  --color-primary-200: oklch(76.41% 0.089 264);
+  --color-primary-300: oklch(68.9% 0.128 263);
+  --color-primary-400: oklch(61.26% 0.165 264);
+  --color-primary-500: oklch(53.73% 0.192 264);
+  --color-primary-600: oklch(46.08% 0.213 264);
+  --color-primary-700: oklch(38.4% 0.211 264);
+  --color-primary-800: oklch(30.46% 0.192 264);
+  --color-primary-900: oklch(21.78% 0.151 264);
+  --color-primary-950: oklch(13.72% 0.074 263);
+
+  /* Secondary Color  */
+  --color-secondary: var(--theme-color-secondary);
+  --color-secondary-50: oklch(91.33% 0.119 142);
+  --color-secondary-100: oklch(83.93% 0.224 142);
+  --color-secondary-200: oklch(76.15% 0.242 142);
+  --color-secondary-300: oklch(68.63% 0.233 142);
+  --color-secondary-400: oklch(61.44% 0.199 142);
+  --color-secondary-500: oklch(54.16% 0.161 142);
+  --color-secondary-600: oklch(46.9% 0.123 142);
+  --color-secondary-700: oklch(39.4% 0.091 142);
+  --color-secondary-800: oklch(31.81% 0.069 142);
+  --color-secondary-900: oklch(23.67% 0.047 142);
+  --color-secondary-950: oklch(13.76% 0.023 144);
+
+  /* Text Color */
+  --color-text: var(--theme-color-text);
+
+  /* Background Color */
+  --color-background: var(--theme-color-background);
+}
+
+@layer base {
+  :root {
+    --theme-color-primary: var(--color-primary-500);
+    --theme-color-secondary: var(--color-secondary-500);
+
+    --theme-color-text: var(--color-slate-800);
+    --theme-color-background: var(--color-slate-200);
+  }
+
+  [data-theme="dark"] {
+    --theme-color-primary: var(--color-primary-400);
+    --theme-color-secondary: var(--color-secondary-400);
+
+    --theme-color-text: var(--color-slate-50);
+    --theme-color-background: var(--color-slate-900);
+  }
+}
+
+@layer components {
+  body {
+    color: var(--color-text);
+    background: var(--color-background);
+  }
+
+  h1 {
+    font-size: var(--text-3xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text);
+
+    @variant md {
+      font-size: var(--text-4xl);
+    }
+
+    @variant lg {
+      font-size: var(--text-5xl);
+    }
+  }
+}

@@ -1,9 +1,9 @@
 {
-  "name": "@turbo-with-tailwind/eslint-config",
+  "name": "@turbo-with-tailwind-v4/eslint-config",
   "version": "0.0.0",
   "private": true,
   "devDependencies": {
-    "@vercel/style-guide": "^5.2.0",
-    "eslint-config-turbo": "^2.0.0"
+    "@vercel/style-guide": "^6.0.0",
+    "eslint-config-turbo": "^2.4.1"
   }
 }

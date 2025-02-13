@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ["@turbo-with-tailwind/eslint-config/react.js"],
+  extends: ["@turbo-with-tailwind-v4/eslint-config/react.js"],
 }

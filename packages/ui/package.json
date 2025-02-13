@@ -1,5 +1,5 @@
 {
-  "name": "@turbo-with-tailwind/ui",
+  "name": "@turbo-with-tailwind-v4/ui",
   "version": "0.0.0",
   "sideEffects": [
     "**/*.css"
@@ -8,27 +8,32 @@
     "dist"
   ],
   "exports": {
-    "./styles.css": "./dist/index.css",
-    "./card": "./src/card.tsx"
+    "./styles.css": "./dist/styles.css",
+    "./Colors": "./src/Colors.tsx"
   },
   "license": "MIT",
   "scripts": {
-    "build": "tailwindcss -i ./src/styles.css -o ./dist/index.css",
+    "build": "tailwindcss -i ./src/styles.css -o ./dist/styles.css",
     "lint": "eslint src/",
-    "dev": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
+    "dev": "tailwindcss -i ./src/styles.css -o ./dist/styles.css --watch",
     "type-check": "tsc --noEmit"
   },
   "peerDependencies": {
     "react": "^18.2.0"
   },
   "devDependencies": {
-    "@turbo-with-tailwind/eslint-config": "workspace:*",
-    "@turbo-with-tailwind/tailwind-config": "workspace:*",
-    "@turbo-with-tailwind/typescript-config": "workspace:*",
-    "@types/react": "^18.2.61",
-    "autoprefixer": "^10.4.18",
-    "postcss": "^8.4.35",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5.3.3"
+    "@turbo-with-tailwind-v4/eslint-config": "workspace:*",
+    "@turbo-with-tailwind-v4/tailwind-config": "workspace:*",
+    "@turbo-with-tailwind-v4/typescript-config": "workspace:*",
+    "@types/react": "^19.0.8",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.6",
+    "@tailwindcss/postcss": "^4.0.3",
+    "@turbo-with-tailwind-v4/design-system": "workspace:*",
+    "@turbo-with-tailwind-v4/utils": "workspace:*",
+    "postcss": "^8.5.2",
+    "tailwindcss": "^4.0.6"
   }
 }

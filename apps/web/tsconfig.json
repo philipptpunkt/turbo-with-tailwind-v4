@@ -1,5 +1,5 @@
 {
-  "extends": "@turbo-with-tailwind/typescript-config/nextjs.json",
+  "extends": "@turbo-with-tailwind-v4/typescript-config/nextjs.json",
   "compilerOptions": {
     "plugins": [{ "name": "next" }]
   },

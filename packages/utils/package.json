@@ -1,0 +1,17 @@
+{
+  "name": "@turbo-with-tailwind-v4/utils",
+  "version": "1.0.0",
+  "private": true,
+  "exports": {
+    "./cn": "./src/cn.ts"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.6.0"
+  },
+  "devDependencies": {
+    "@turbo-with-tailwind-v4/eslint-config": "workspace:*",
+    "@turbo-with-tailwind-v4/typescript-config": "workspace:*",
+    "typescript": "^5.7.3"
+  }
+}
