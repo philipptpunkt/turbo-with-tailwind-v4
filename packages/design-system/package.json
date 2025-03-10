@@ -24,7 +24,6 @@
   },
   "devDependencies": {
     "@turbo-with-tailwind-v4/eslint-config": "workspace:*",
-    "@turbo-with-tailwind-v4/tailwind-config": "workspace:*",
     "@turbo-with-tailwind-v4/typescript-config": "workspace:*",
     "@types/react": "^19.0.8",
     "typescript": "^5.7.3"

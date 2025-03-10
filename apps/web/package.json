@@ -23,7 +23,6 @@
   "devDependencies": {
     "@next/eslint-plugin-next": "^15.1.7",
     "@turbo-with-tailwind-v4/eslint-config": "workspace:*",
-    "@turbo-with-tailwind-v4/tailwind-config": "workspace:*",
     "@turbo-with-tailwind-v4/typescript-config": "workspace:*",
     "@types/node": "^22.13.1",
     "@types/react": "^19.0.8",

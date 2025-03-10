@@ -1,5 +1,0 @@
-{
-  "extends": "@turbo-with-tailwind-v4/typescript-config/base.json",
-  "include": ["tailwind.config.ts"],
-  "exclude": ["dist", "build", "node_modules"]
-}
