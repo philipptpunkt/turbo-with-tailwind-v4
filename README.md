@@ -1,6 +1,6 @@
-# Turborepo with Tailwind CSS
+# Turborepo with Tailwind CSS v4
 
-This is based on an official starter Turborepo, but was modified to meet certain criteria.
+This is an example setup for a mono repository using Tailwind CSS version 4.
 
 ## What's inside?
 
@@ -8,12 +8,11 @@ This Turborepo includes the following packages/apps:
 
 ### Apps and Packages
 
-- `web`: another [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/)
-- `design-system`: a collection of basic React ui components with [Tailwind CSS](https://tailwindcss.com/) shared by `web` application
-- `ui`: a set of more specific React ui components with [Tailwind CSS](https://tailwindcss.com/) shared by `web` application
+- `web`: a [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/)
+- `design-system`: a collection of basic React Design System components and Design Tokens styled with [Tailwind CSS](https://tailwindcss.com/) and shared with `web` application and other packages.
+- `ui`: a set of more specific React UI components with [Tailwind CSS](https://tailwindcss.com/) shared with `web` application.
 - `@turbo-with-tailwind/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `@turbo-with-tailwind/typescript-config`: `tsconfig.json`s used throughout the monorepo
-- `@turbo-with-tailwind/tailwind-config`: `tailwind.config.ts` includes all custom tailwind configurations
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
@@ -21,25 +20,12 @@ Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
 This example is set up to produce compiled styles for `design-system` and `ui` components into the `dist` directories. The component `.tsx` files are consumed by the Next.js apps directly using `transpilePackages` in `next.config.js`. This was chosen for several reasons:
 
-- Make sharing one `tailwind.config.ts` to apps and packages as easy as possible.
 - Make package compilation simple by only depending on the Next.js Compiler and `tailwindcss`.
-- Ensure Tailwind classes do not overwrite each other. The packages use a `ds-` and `ui-` prefix for their classes.
 - Maintain clear package export boundaries.
 
-Another option is to consume `packages/design-system` or `packages/ui` directly from source without building. If using this option, you will need to update the `tailwind.config.js` in your apps to be aware of your package locations, so it can find all usages of the `tailwindcss` class names for CSS compilation.
+### Differences in Tailwind 4 vs Tailwind 3
 
-For example, in [tailwind.config.ts](packages/config-tailwind/tailwind.config.ts):
-
-```js
-  content: [
-    // app content
-    `src/**/*.{js,ts,jsx,tsx}`,
-    // include packages if not transpiling
-    "../../packages/ui/*.{js,ts,jsx,tsx}",
-  ],
-```
-
-If you choose this strategy, you can remove the `tailwindcss` and `autoprefixer` dependencies from the `design-system`/ `ui` package.
+Compared to Tailwind CSS version 3 the tailwind config files have been removed (including the shared config package). All configurations are now placed directly inside the CSS file(s) see [Tailwind Upgrade Guide](https://tailwindcss.com/docs/upgrade-guide) for more information. As well as [Tailwind's directives](https://tailwindcss.com/docs/functions-and-directives#directives) for custom configurations.
 
 ### Utilities
 
