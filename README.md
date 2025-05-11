@@ -15,7 +15,7 @@ pnpm install
 Update all dependencies in all apps and packages to latest version
 
 ```bash
-pnpm pnpm up --recursive --latest
+pnpm up --recursive --latest
 ```
 
 ### Dev mode
