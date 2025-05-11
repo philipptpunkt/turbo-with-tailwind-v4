@@ -7,11 +7,11 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
-    "tailwind-merge": "^3.0.2"
+    "tailwind-merge": "^3.2.0"
   },
   "devDependencies": {
     "@turbo-with-tailwind-v4/eslint-config": "workspace:*",
     "@turbo-with-tailwind-v4/typescript-config": "workspace:*",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.3"
   }
 }

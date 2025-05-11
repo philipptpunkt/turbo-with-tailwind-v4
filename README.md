@@ -2,6 +2,44 @@
 
 This is an example setup for a mono repository using Tailwind CSS version 4.
 
+## Getting Started
+
+### Dependencies
+
+First install the necessary dependencies
+
+```bash
+pnpm install
+```
+
+Update all dependencies in all apps and packages to latest version
+
+```bash
+pnpm pnpm up --recursive --latest
+```
+
+### Dev mode
+
+Then you can run the project with
+
+```bash
+pnpm dev
+```
+
+### Build for production
+
+or you can build an optimized production version with
+
+```bash
+pnpm build
+```
+
+or build and run the production version with
+
+```bash
+pnpm start
+```
+
 ## What's inside?
 
 This Turborepo includes the following packages/apps:
